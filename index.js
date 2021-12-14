@@ -2,10 +2,10 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require('util');
 
-const Employee = require('../lib/Employee');
-const Engineer = require('../lib/Engineer');
-const Intern = require('../lib/Intern');
-const Manager = require('../lib/Manager');
+const Employee = require('./lib/Employee');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const Manager = require('./lib/Manager');
 const teamBuilder = require('./src/page-template');
 
 let Team = [];
@@ -149,9 +149,10 @@ const init = () => {
 teamBuilder(Team);
 
 const generateTeam = () => {
+    
     let team = teamBuilder(Team);
 
-    fs.writeFileAsync('..dist/team.html', team, 'utf-8')
+    fs.writeFileSync('.dist/team.html', team, 'utf-8')
 };
 
 init();
