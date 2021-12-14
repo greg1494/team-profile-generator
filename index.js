@@ -152,7 +152,7 @@ const generateTeam = () => {
     
     let team = teamBuilder(Team);
 
-    fs.writeFileSync('.dist/team.html', team, 'utf-8')
+    fs.writeFileSync('./dist/team.html', team, 'utf-8')
 };
 
 init();
