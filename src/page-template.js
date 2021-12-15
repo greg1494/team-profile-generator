@@ -52,10 +52,10 @@ const generateMembers = teamArr => {
     `
   };
 
-  for (var i = 0; i < intern.length -1; i++) {
+  for (var i = 0; i < intern.length - 1; i++) {
     let htmlInt = generateInternHTML(intern[i]);
     htmlData.push(htmlInt);
-  }
+  };
   generateInternHTML = (internData) => {
     return `
     <div class="card col-md-auto" style="width: 18rem;">
